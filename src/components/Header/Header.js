@@ -1,7 +1,7 @@
 import styles from "./Header.module.scss";
-import cookchef from "../assets/images/cookchef.png";
+import cookchef from "../../assets/images/cookchef.png";
 import { useState } from "react";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,14 +13,14 @@ function Header() {
       </div>
       <ul className={styles.headerList}>
         <button className="mr-5 btn btn-reverse-primary">
-          <i class="fa-solid fa-heart mr-5"></i>
+          <i className="fa-solid fa-heart mr-5"></i>
           <span>Wishlist</span>
         </button>
         <button className="btn btn-primary">connexion</button>
       </ul>
       <i
         onClick={() => setShowMenu(true)}
-        class={`fa-solid fa-bars ${styles.headerXs}`}
+        className={`fa-solid fa-bars ${styles.headerXs}`}
       ></i>
       {showMenu && (
         <>
